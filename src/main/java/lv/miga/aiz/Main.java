@@ -42,9 +42,9 @@ public class Main {
 
 					fillValueMapFromDocument(map, doc);
 				} catch (IllegalArgumentException e) {
-					map.put("message", "Kïûda, objekts nav atrasts, ID: " + id);
+					map.put("message", "KÄ¼Å«da, objekts nav atrasts, ID: " + id);
 				} catch (HttpStatusException e) {
-					map.put("message", "Kïûda, ielâdçjot URL: " + url);
+					map.put("message", "KÄ¼Å«da, ielÄdÄ“jot URL: " + url);
 				}
 
 			}
@@ -56,24 +56,24 @@ public class Main {
 	private static void fillValueMapFromDocument(Map<String, Object> map, Document doc) {
 		map.put("date", new Date());
 
-		map.put("name", getValueFromTable(doc, "nosaukums adreğu klasifikatorâ"));
+		map.put("name", getValueFromTable(doc, "nosaukums adreÅ¡u klasifikatorÄ"));
 		map.put("type", getValueFromTable(doc, "objekta veids"));
-		map.put("population", formatPopulationString(getValueFromTable(doc, "vçrtîba")));
+		map.put("population", formatPopulationString(getValueFromTable(doc, "vÄ“rtÄ«ba")));
 		map.put("populationYear", getValueFromTable(doc, "apraksts"));
 
 		String[] territ = getValueFromTerritTable(doc);
 		map.put("parish", territ[0]);
 		map.put("parish_gen", territ[0].replace("pagasts", "pagasta").replace("novads", "novada"));
-		map.put("parish_loc", territ[0].replace("pagasts", "pagastâ").replace("novads", "novadâ"));
+		map.put("parish_loc", territ[0].replace("pagasts", "pagastÄ").replace("novads", "novadÄ"));
 		map.put("municipality", territ[1]);
 		map.put("municipality_gen", territ[1].replace("novads", "novada"));
 		map.put("district", territ[2]);
-		map.put("district_loc", territ[2].replace("rajons", "rajonâ"));
+		map.put("district_loc", territ[2].replace("rajons", "rajonÄ"));
 
 		String latitude = getValueFromTable(doc, "platums");
 		String longitude = getValueFromTable(doc, "garums");
 
-		Pattern p = Pattern.compile("^.*\\((\\d+)° (\\d+)' (\\d+)\"\\)$");
+		Pattern p = Pattern.compile("^.*\\((\\d+)Â° (\\d+)' (\\d+)\"\\)$");
 		Matcher m = p.matcher(latitude);
 		if (m.matches()) {
 			map.put("lat_deg", m.group(1));
@@ -87,7 +87,7 @@ public class Main {
 			map.put("lon_sec", m.group(3));
 		}
 
-		// TODO viensçtas???
+		// TODO viensÄ“tas???
 	}
 
 	private static String[] getValueFromTerritTable(Document doc) {
@@ -96,7 +96,7 @@ public class Main {
 		if (el.size() > 2) {
 			values[0] = el.get(0).text().trim();
 			values[1] = el.get(1).text().trim();
-			values[2] = el.get(2).text().replace("agrâk", "").trim();
+			values[2] = el.get(2).text().replace("agrÄk", "").trim();
 		}
 		return values;
 	}

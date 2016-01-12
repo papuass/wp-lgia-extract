@@ -3,7 +3,7 @@
 <@layout.masterTemplate title="Vikiprojekts:Latvijas pagasti | LGIA dati">
 
 <h3><a href="https://lv.wikipedia.org/wiki/Vikiprojekts:Latvijas_pagasti">Vikiprojekts:Latvijas pagasti</a></h3>
-<p class="explain">Rîks Vikipçdijas aizmetòa izveidei par apdzîvotu vietu no LGIA vietvârdu datubâzes datiem.</p>
+<p class="explain">RÄ«ks VikipÄ“dijas aizmetÅ†a izveidei par apdzÄ«votu vietu no LGIA vietvÄrdu datubÄzes datiem.</p>
 
 <div class="form-container">
 <form class="form-inline" action="/lgia-extract" method="GET">
@@ -32,7 +32,7 @@
 <!-- TODO copy to clipboard -->
 
 <pre class="wikitext">
-{{Apdzîvotas vietas infokaste
+{{ApdzÄ«votas vietas infokaste
 | name                     = ${name}
 | settlement_type          = ${type}
 | image_skyline            = 
@@ -45,33 +45,33 @@
 | subdivision_name         = {{LAT}}
 | subdivision_name1        = [[${municipality}]]
 | subdivision_name2        = [[${parish}]]
-| established_title        = &lt;!-- Pirmoreiz minçts --&gt;
-| established_date         = &lt;!-- datums, kad pirmoreiz minçts --&gt;
+| established_title        = &lt;!-- Pirmoreiz minÄ“ts --&gt;
+| established_date         = &lt;!-- datums, kad pirmoreiz minÄ“ts --&gt;
 | area_total_km2           = 
-| area_land_km2            = &lt;!-- var ielikt teritoriâlplânoğanâ noteikto platîbu --&gt;
+| area_land_km2            = &lt;!-- var ielikt teritoriÄlplÄnoÅ¡anÄ noteikto platÄ«bu --&gt;
 | population_as_of         = ${populationYear}
-| population_footnotes     = &lt;ref&gt;{{Tîmekïa atsauce |url=${url} |title=Informâcija par objektu: ${name} |accessdate=${date?string('YYYY-MM-DD')} |work= LÌIA vietvârdu datubâze |publisher=[[Latvijas Ìeotelpiskâs informâcijas aìentûra]] |language= lv }}&lt;/ref&gt;
+| population_footnotes     = &lt;ref&gt;{{TÄ«mekÄ¼a atsauce |url=${url} |title=InformÄcija par objektu: ${name} |accessdate=${date?string('YYYY-MM-DD')} |work= LÄ¢IA vietvÄrdu datubÄze |publisher=[[Latvijas Ä¢eotelpiskÄs informÄcijas aÄ£entÅ«ra]] |language= lv }}&lt;/ref&gt;
 | population_total         = ${population}
-| population_density_km2   = <!-- apdzîvotîbas blîvums -->
+| population_density_km2   = <!-- apdzÄ«votÄ«bas blÄ«vums -->
 | latd  = ${lat_deg} | latm  = ${lat_min} | lats  = ${lat_sec} | latNS  = N
 | longd = ${lon_deg} | longm = ${lon_min} | longs = ${lon_sec} | longEW = E
 | elevation_m              = 
-| website                  = &lt;!-- mâjaslapa; ja atğíirîga no pagasta/novada lapas --&gt;
-| postal_code_type         = Pasta nodaïa
+| website                  = &lt;!-- mÄjaslapa; ja atÅ¡Ä·irÄ«ga no pagasta/novada lapas --&gt;
+| postal_code_type         = Pasta nodaÄ¼a
 | postal_code              = 
-| footnotes                = &lt;!-- specpiezîmes --&gt;
+| footnotes                = &lt;!-- specpiezÄ«mes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvçlies vienu --&gt; ziemeïu dienvidu austrumu rietumu centrâlajâ daïâ {{nobr|XX km}} no novada centra [[XXXX]]s un {{nobr|YYY km}} no [[Rîga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvÄ“lies vienu --&gt; ziemeÄ¼u dienvidu austrumu rietumu centrÄlajÄ daÄ¼Ä {{nobr|XX km}} no novada centra [[XXXX]]s un {{nobr|YYY km}} no [[RÄ«ga]]s.
 
-Apdzîvotâ vieta izvietojusies pie autoceïa [[PYYYY]], ZZZZ upes krastâ.
+ApdzÄ«votÄ vieta izvietojusies pie autoceÄ¼a [[PYYYY]], ZZZZ upes krastÄ.
 
-Pirms 2009. gadâ noslçgtâs [[Latvijas administratîvais iedalîjums|administratîvi teritoriâlâs reformas]] atradâs [[${district}|${district_loc}]].
+Pirms 2009. gadÄ noslÄ“gtÄs [[Latvijas administratÄ«vais iedalÄ«jums|administratÄ«vi teritoriÄlÄs reformas]] atradÄs [[${district}|${district_loc}]].
 
 == Atsauces ==
 {{atsauces}}
 
-{{Latvijas ìeogrâfija-aizmetnis}}
+{{Latvijas Ä£eogrÄfija-aizmetnis}}
 
 {{${parish_gen} ciemi}}
 </pre>	
