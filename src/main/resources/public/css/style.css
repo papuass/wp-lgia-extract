@@ -1,0 +1,14 @@
+p.explain {
+	color: grey;
+	font-style: italic;
+}
+ul.links {
+	float: right;
+	width: 300px;	
+}
+.form-container {
+	float: left;
+}
+pre.wikitext {
+	clear: both;
+}
