@@ -41,6 +41,12 @@ public class Main {
 					map.put("url", url);
 
 					fillValueMapFromDocument(map, doc);
+
+					String name = (String) map.get("name");
+					if (name != null) {
+						PostCodeService postCodeService = new PostCodeServiceImpl();
+						map.put("post_code", postCodeService.getPostCode(name));
+					}
 				} catch (IllegalArgumentException e) {
 					map.put("message", "Kļūda, objekts nav atrasts, ID: " + id);
 				} catch (HttpStatusException e) {

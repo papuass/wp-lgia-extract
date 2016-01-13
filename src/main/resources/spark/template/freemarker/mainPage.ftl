@@ -25,7 +25,8 @@
 	<li><a href="https://www.google.lv/maps/place/${name},+${parish}">Google Maps (ciems)</a></li>
 	<li><a href="https://www.google.lv/maps/place/${parish}">Google Maps (pagasts)</a></li>
 	<li><a href="http://www.kurtuesi.lv/maps">Kurtuesi</a> (augstums no topokartes)</li>
-	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>	
+	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>
+	<li><a href="https://www.google.lv/images?safe=off&tbm=isch&tbs=sur:fmc&q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google Images</a> (meklēt brīvus attēlus)</li>
 </ul>
 
 
@@ -37,7 +38,7 @@
 | settlement_type          = ${type}
 | image_skyline            = 
 | image_caption            = 
-| pushpin_map              = Latvija
+| pushpin_map              = Latvija#${municipality}
 | pushpin_label_position   = 
 | subdivision_type         = Valsts
 | subdivision_type1        = Novads
@@ -58,13 +59,13 @@
 | elevation_m              = 
 | website                  = &lt;!-- mājaslapa; ja atšķirīga no pagasta/novada lapas --&gt;
 | postal_code_type         = Pasta nodaļa
-| postal_code              = 
+| postal_code              = ${post_code}
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā XX km no novada centra [[XXXX]]s un YYY km no [[Rīga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[XXXX]]s un YYY km no [[Rīga]]s.
 
-Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], ZZZZ upes krastā.
+Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], ZZZZ upes ezera krastā.
 
 Pirms 2009. gadā noslēgtās [[Latvijas administratīvais iedalījums|administratīvi teritoriālās reformas]] atradās [[${district}|${district_loc}]].
 
