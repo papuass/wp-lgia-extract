@@ -38,7 +38,7 @@
 | image_skyline            = 
 | image_caption            = 
 | pushpin_map              = Latvia
-| pushpin_label_position   = right
+| pushpin_label_position   = 
 | subdivision_type         = Valsts
 | subdivision_type1        = Novads
 | subdivision_type2        = Pagasts
@@ -49,8 +49,8 @@
 | established_date         = &lt;!-- datums, kad pirmoreiz minēts --&gt;
 | area_total_km2           = 
 | area_land_km2            = &lt;!-- var ielikt teritoriālplānošanā noteikto platību --&gt;
-| population_as_of         = ${populationYear}
-| population_footnotes     = &lt;ref&gt;{{Tīmekļa atsauce |url=${url} |title=Informācija par objektu: ${name} |accessdate=${date?string('YYYY-MM-DD')} |work= LĢIA vietvārdu datubāze |publisher=[[Latvijas Ģeotelpiskās informācijas aģentūra]] |language= lv }}&lt;/ref&gt;
+| population_as_of         = ${population_date}
+| population_footnotes     = &lt;ref&gt;{{Tīmekļa atsauce |url=${url} |title=Informācija par objektu: ${name} |accessdate=${date?string("{{'dat'|yyyy|MM|dd||'bez'}}")} |work= LĢIA vietvārdu datubāze |publisher=[[Latvijas Ģeotelpiskās informācijas aģentūra]] |language= lv }}&lt;/ref&gt;
 | population_total         = ${population}
 | population_density_km2   = <!-- apdzīvotības blīvums -->
 | latd  = ${lat_deg} | latm  = ${lat_min} | lats  = ${lat_sec} | latNS  = N
@@ -62,7 +62,7 @@
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā {{nobr|XX km}} no novada centra [[XXXX]]s un {{nobr|YYY km}} no [[Rīga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā XX km no novada centra [[XXXX]]s un YYY km no [[Rīga]]s.
 
 Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], ZZZZ upes krastā.
 
@@ -70,6 +70,7 @@ Pirms 2009. gadā noslēgtās [[Latvijas administratīvais iedalījums|administr
 
 == Atsauces ==
 {{atsauces}}
+
 
 {{Latvijas ģeogrāfija-aizmetnis}}
 

@@ -59,7 +59,7 @@ public class Main {
 		map.put("name", getValueFromTable(doc, "nosaukums adrešu klasifikatorā"));
 		map.put("type", getValueFromTable(doc, "objekta veids"));
 		map.put("population", formatPopulationString(getValueFromTable(doc, "vērtība")));
-		map.put("populationYear", getValueFromTable(doc, "apraksts"));
+		map.put("population_date", reformatDateString(getValueFromTable(doc, "apraksts")));
 
 		String[] territ = getValueFromTerritTable(doc);
 		map.put("parish", territ[0]);
@@ -88,6 +88,24 @@ public class Main {
 		}
 
 		// TODO viensētas???
+	}
+
+	private static String reformatDateString(String value) {
+		String returnString = value;
+		Pattern datePattern = Pattern.compile("^(\\d+)\\.(\\d+)\\.(\\d+)\\.$");
+		Pattern yearPattern = Pattern.compile("^(\\d+)\\.$");
+
+		Matcher m = datePattern.matcher(value);
+		if (m.matches()) {
+			returnString = "{{dat|" + m.group(3) + "|" + m.group(2) + "|" + m.group(1) + "||bez}}";
+		} else {
+			m = yearPattern.matcher(value);
+			if (m.matches()) {
+				returnString = "{{dat|" + m.group(1) + "||||bez}}";
+			}
+		}
+
+		return returnString;
 	}
 
 	private static String[] getValueFromTerritTable(Document doc) {
