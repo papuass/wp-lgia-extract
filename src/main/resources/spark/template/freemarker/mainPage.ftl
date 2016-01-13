@@ -37,7 +37,7 @@
 | settlement_type          = ${type}
 | image_skyline            = 
 | image_caption            = 
-| pushpin_map              = Latvia
+| pushpin_map              = Latvija
 | pushpin_label_position   = 
 | subdivision_type         = Valsts
 | subdivision_type1        = Novads
@@ -52,7 +52,7 @@
 | population_as_of         = ${population_date}
 | population_footnotes     = &lt;ref&gt;{{Tīmekļa atsauce |url=${url} |title=Informācija par objektu: ${name} |accessdate=${date?string("{{'dat'|yyyy|MM|dd||'bez'}}")} |work= LĢIA vietvārdu datubāze |publisher=[[Latvijas Ģeotelpiskās informācijas aģentūra]] |language= lv }}&lt;/ref&gt;
 | population_total         = ${population}
-| population_density_km2   = <!-- apdzīvotības blīvums -->
+| population_density_km2   = &lt;!-- apdzīvotības blīvums --&gt;
 | latd  = ${lat_deg} | latm  = ${lat_min} | lats  = ${lat_sec} | latNS  = N
 | longd = ${lon_deg} | longm = ${lon_min} | longs = ${lon_sec} | longEW = E
 | elevation_m              = 
