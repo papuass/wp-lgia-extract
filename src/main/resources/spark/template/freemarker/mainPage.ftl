@@ -38,7 +38,7 @@
 | settlement_type          = ${type}
 | image_skyline            = 
 | image_caption            = 
-| pushpin_map              = Latvija#${municipality}
+| pushpin_map              = Latvija
 | pushpin_label_position   = 
 | subdivision_type         = Valsts
 | subdivision_type1        = Novads
@@ -63,7 +63,7 @@
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[XXXX]]s un YYY km no [[Rīga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[${municipality_adm_center}]]s un YYY km no [[Rīga]]s.
 
 Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], ZZZZ upes ezera krastā.
 

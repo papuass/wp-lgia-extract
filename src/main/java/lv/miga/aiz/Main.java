@@ -73,6 +73,7 @@ public class Main {
 		map.put("parish_loc", territ[0].replace("pagasts", "pagastā").replace("novads", "novadā"));
 		map.put("municipality", territ[1]);
 		map.put("municipality_gen", territ[1].replace("novads", "novada"));
+		map.put("municipality_adm_center", territ[1].replace("s novads", "").replace(" novads", "")); // does not work for all
 		map.put("district", territ[2]);
 		map.put("district_loc", territ[2].replace("rajons", "rajonā"));
 
