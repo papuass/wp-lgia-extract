@@ -1,14 +1,14 @@
 <#import "masterTemplate.ftl" as layout />
 
-<@layout.masterTemplate title="Vikiprojekts:Latvijas pagasti | LGIA dati">
+<@layout.masterTemplate title="Vikiprojekts:Latvijas pagasti | LĢIA dati">
 
 <h3><a href="https://lv.wikipedia.org/wiki/Vikiprojekts:Latvijas_pagasti">Vikiprojekts:Latvijas pagasti</a></h3>
-<p class="explain">Rīks Vikipēdijas aizmetņa izveidei par apdzīvotu vietu no LGIA vietvārdu datubāzes datiem.</p>
+<p class="explain">Rīks Vikipēdijas aizmetņa izveidei par apdzīvotu vietu no LĢIA vietvārdu datubāzes datiem.</p>
 
 <div class="form-container">
 <form class="form-inline" action="/lgia-extract" method="GET">
 <div class="form-group">
-    <label for="id"><a href="http://vietvardi.lgia.gov.lv/vv/to_www.sakt">LGIA ID</a></label>
+    <label for="id"><a href="http://vietvardi.lgia.gov.lv/vv/to_www.sakt">LĢIA ID</a></label>
 	<input class="form-control" type="text" id="id" name="id" value="<#if id??>${id}</#if>">    
 </div>
 <button class="btn btn-default" type="submit">Iesniegt</button>
@@ -21,7 +21,7 @@
 
 <#if id??>
 <ul class="links">
-	<li><a href="${url}">LGIA</a></li>
+	<li><a href="${url}">LĢIA</a></li>
 	<li><a href="https://www.google.lv/maps/place/${name},+${parish}">Google Maps (ciems)</a></li>
 	<li><a href="https://www.google.lv/maps/place/${parish}">Google Maps (pagasts)</a></li>
 	<li><a href="http://www.kurtuesi.lv/maps">Kurtuesi</a> (augstums no topokartes)</li>
@@ -51,7 +51,7 @@
 | area_total_km2           = 
 | area_land_km2            = &lt;!-- var ielikt teritoriālplānošanā noteikto platību --&gt;
 | population_as_of         = ${population_date}
-| population_footnotes     = &lt;ref&gt;{{Tīmekļa atsauce |url=${url} |title=Informācija par objektu: ${name} |accessdate=${date?string("{{'dat'|yyyy|MM|dd||'bez'}}")} |work= LĢIA vietvārdu datubāze |publisher=[[Latvijas Ģeotelpiskās informācijas aģentūra]] |language= lv }}&lt;/ref&gt;
+| population_footnotes     = &lt;ref name="lgia"&gt;{{Tīmekļa atsauce |url=${url} |title=Informācija par objektu: ${name} |accessdate=${date?string("{{'dat'|yyyy|MM|dd||'bez'}}")} |work= LĢIA vietvārdu datubāze |publisher=[[Latvijas Ģeotelpiskās informācijas aģentūra]] }}&lt;/ref&gt;
 | population_total         = ${population}
 | population_density_km2   = &lt;!-- apdzīvotības blīvums --&gt;
 | latd  = ${lat_deg} | latm  = ${lat_min} | lats  = ${lat_sec} | latNS  = N
