@@ -2,13 +2,26 @@ p.explain {
 	color: grey;
 	font-style: italic;
 }
+
 ul.links {
 	float: right;
-	width: 300px;	
+	width: 300px;
 }
+
 .form-container {
 	float: left;
 }
+
 pre.wikitext {
 	clear: both;
+}
+
+.top-container {
+	clear: both;
+}
+
+.copybutton {
+	float: right;
+	clear: both;
+	margin: 3px 0;
 }
