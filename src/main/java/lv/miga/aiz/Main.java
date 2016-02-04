@@ -3,6 +3,7 @@ package lv.miga.aiz;
 import static spark.Spark.get;
 import static spark.Spark.staticFileLocation;
 
+import java.net.SocketTimeoutException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,15 +31,14 @@ public class Main {
 			String id = req.queryParams("id");
 			if (id != null) {
 				String url = LGIA_URL + id;
+				map.put("id", id);
+				map.put("url", url);
 
 				try {
 					Document doc = Jsoup.connect(url).get();
 					if (doc.select("#drukat").isEmpty()) {
 						throw new IllegalArgumentException();
 					}
-
-					map.put("id", id);
-					map.put("url", url);
 
 					fillValueMapFromDocument(map, doc);
 
@@ -51,8 +51,9 @@ public class Main {
 					map.put("message", "Kļūda, objekts nav atrasts, ID: " + id);
 				} catch (HttpStatusException e) {
 					map.put("message", "Kļūda, ielādējot URL: " + url);
+				} catch (SocketTimeoutException e) {
+					map.put("message", "Noildze, ielādējot URL: " + url + ", mēģiniet vēlreiz");
 				}
-
 			}
 
 			return new ModelAndView(map, "mainPage.ftl");

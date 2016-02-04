@@ -25,3 +25,8 @@ pre.wikitext {
 	clear: both;
 	margin: 3px 0;
 }
+.message {
+	color: red;
+	font-weight: bolder;
+	margin: 3px 0;
+}

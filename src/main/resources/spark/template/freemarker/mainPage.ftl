@@ -5,6 +5,10 @@
 <h3><a href="https://lv.wikipedia.org/wiki/Vikiprojekts:Latvijas_pagasti">Vikiprojekts:Latvijas pagasti</a></h3>
 <p class="explain">Rīks Vikipēdijas aizmetņa izveidei par apdzīvotu vietu no LĢIA vietvārdu datubāzes datiem.</p>
 
+<#if message??>
+	<div class="message">${message}</div>
+</#if>
+
 <div class="top-container">
 <div class="form-container">
 <form class="form-inline" action="/lgia-extract" method="GET">
@@ -16,14 +20,11 @@
 </form>
 </div>
 
-<#if message??>
-	<div class="message">${message}</div>
-</#if>
-
-<#if id??>
+<#if name??>
 <ul class="links">
 	<li><a href="${url}">LĢIA</a></li>
-	<li>Google Maps: <a href="https://www.google.lv/maps/place/${name},+${parish}">ciems</a>, <a href="https://www.google.lv/maps/place/${parish}">pagasts</a></li>
+	<li><a href="https://www.google.lv/maps/place/${name},+${parish}">Google Maps (ciems)</a></li>
+	<li><a href="https://www.google.lv/maps/place/${parish}">Google Maps (pagasts)</a></li>
 	<li><a href="http://www.kurtuesi.lv/maps">Kurtuesi</a> (augstums no topokartes)</li>
 	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>
 	<li><a href="https://www.google.lv/images?safe=off&tbm=isch&tbs=sur:fmc&q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google Images</a> (meklēt brīvus attēlus)</li>
