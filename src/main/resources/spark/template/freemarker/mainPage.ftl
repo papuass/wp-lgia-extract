@@ -1,8 +1,8 @@
 <#import "masterTemplate.ftl" as layout />
 
-<@layout.masterTemplate title="Vikiprojekts:Latvijas pagasti | LĢIA dati">
+<@layout.masterTemplate title="Vikiprojekts:Latvijas ciemi | LĢIA dati">
 
-<h3><a href="https://lv.wikipedia.org/wiki/Vikiprojekts:Latvijas_pagasti">Vikiprojekts:Latvijas pagasti</a></h3>
+<h3><a href="https://lv.wikipedia.org/wiki/Vikiprojekts:Latvijas_ciemi">Vikiprojekts:Latvijas ciemi</a></h3>
 <p class="explain">Rīks Vikipēdijas aizmetņa izveidei par apdzīvotu vietu no LĢIA vietvārdu datubāzes datiem.</p>
 
 <#if message??>
@@ -70,8 +70,6 @@
 '''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[${municipality_adm_center}]]s un YYY km no [[Rīga]]s.
 
 Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], [[ZZZZ]] upes ezera krastā.
-
-Pirms 2009. gadā noslēgtās [[Latvijas administratīvais iedalījums|administratīvi teritoriālās reformas]] atradās [[${district}|${district_loc}]].
 
 == Atsauces ==
 {{atsauces}}
