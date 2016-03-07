@@ -33,7 +33,8 @@ public class Main {
 				String url = LGIA_URL + id;
 				map.put("id", id);
 				map.put("url", url);
-
+				map.put("otherUses", req.queryParams("otheruses"));
+				
 				try {
 					Document doc = Jsoup.connect(url).get();
 					if (doc.select("#drukat").isEmpty()) {

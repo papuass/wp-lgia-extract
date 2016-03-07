@@ -13,6 +13,10 @@
 <div class="form-container">
 <form class="form-inline" action="/lgia-extract" method="GET">
 <div class="form-group">
+	<input type="checkbox" name="otheruses" id="otheruses" value="1"<#if otherUses??> checked</#if>/>
+	<label for="otheruses">Pievienot veidni "citas nozīmes"</label>
+</div><br />
+<div class="form-group">
     <label for="id"><a href="http://vietvardi.lgia.gov.lv/vv/to_www.sakt">LĢIA ID</a></label>
 	<input class="form-control" type="text" id="id" name="id" value="<#if id??>${id}</#if>">    
 </div>
@@ -36,7 +40,7 @@
 <button class="btn js-copybtn">Kopēt starpliktuvē</button>
 </div>
 
-<pre class="wikitext" id="wikitext">
+<pre class="wikitext" id="wikitext"><#if otherUses??>{{citas nozīmes|apdzīvotu vietu ${parish_loc}|${name}|${name}}}</#if>
 {{Apdzīvotas vietas infokaste
 | name                     = ${name}
 | settlement_type          = ${type}
