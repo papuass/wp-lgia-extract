@@ -34,7 +34,7 @@ public class Main {
 				map.put("id", id);
 				map.put("url", url);
 				map.put("otherUses", req.queryParams("otheruses"));
-				
+
 				try {
 					Document doc = Jsoup.connect(url).get();
 					if (doc.select("#drukat").isEmpty()) {
@@ -96,6 +96,8 @@ public class Main {
 			map.put("lon_sec", m.group(3));
 		}
 
+		map.put("var_id", reformatDateString(getValueFromTable(doc, "#layertopoArisData", "kods")));
+
 		// TODO viensētas???
 	}
 
@@ -133,7 +135,11 @@ public class Main {
 	}
 
 	private static String getValueFromTable(Document doc, String string) {
-		Elements el = doc.select("table.h100 td[style=vertical-align:top;] td:contains(" + string
+		return getValueFromTable(doc, "", string);
+	}
+
+	private static String getValueFromTable(Document doc, String marker, String string) {
+		Elements el = doc.select("table.h100 td[style=vertical-align:top;] " + marker + " td:contains(" + string
 				+ ":) + td.dati_skatit");
 		if (!el.isEmpty()) {
 			return el.get(0).text().trim();

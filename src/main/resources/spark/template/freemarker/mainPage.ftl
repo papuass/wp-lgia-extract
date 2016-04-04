@@ -68,6 +68,8 @@
 | website                  = &lt;!-- mājaslapa; ja atšķirīga no pagasta/novada lapas --&gt;
 | postal_code_type         = Pasta nodaļa
 | postal_code              = ${post_code}
+| var_id                   = ${var_id}
+| lgia_id                  = ${id}
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
