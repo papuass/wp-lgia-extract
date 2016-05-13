@@ -73,9 +73,9 @@
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Izvietojies pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[${municipality_adm_center}]]s un YYY km no [[Rīga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Atrodas pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra [[XXXX]]s, XX km no novada centra [[${municipality_adm_center}]]s un YYY km no [[Rīga]]s.
 
-Apdzīvotā vieta izvietojusies pie autoceļa [[PYYYY]], [[ZZZZ]] upes ezera krastā.
+Apdzīvotā vieta atrodas pie autoceļa [[PYYYY]], [[ZZZZ]] upes ezera krastā.
 
 == Atsauces ==
 {{atsauces}}
