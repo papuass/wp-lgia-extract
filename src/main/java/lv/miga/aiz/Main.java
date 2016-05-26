@@ -64,7 +64,11 @@ public class Main {
 	private static void fillValueMapFromDocument(Map<String, Object> map, Document doc) {
 		map.put("date", new Date());
 
-		map.put("name", getValueFromTable(doc, "nosaukums adrešu klasifikatorā"));
+		String name = getValueFromTable(doc, "nosaukums adrešu klasifikatorā");
+		if (name.equals("")) {
+			name = getValueFromTable(doc, "pamatnosaukums");
+		}
+		map.put("name", name);
 		map.put("type", getValueFromTable(doc, "objekta veids"));
 		map.put("population", formatPopulationString(getValueFromTable(doc, "vērtība")));
 		map.put("population_date", reformatDateString(getValueFromTable(doc, "apraksts")));
@@ -142,7 +146,7 @@ public class Main {
 		Elements el = doc.select("table.h100 td[style=vertical-align:top;] " + marker + " td:contains(" + string
 				+ ":) + td.dati_skatit");
 		if (!el.isEmpty()) {
-			return el.get(0).text().trim();
+			return el.get(0).text().replace('\u00A0' ,' ').trim();
 		}
 		return NOT_FOUND;
 	}
