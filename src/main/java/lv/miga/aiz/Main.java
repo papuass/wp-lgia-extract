@@ -15,6 +15,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import lv.miga.aiz.ParishAdmCenterLinkService.Case;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
 
@@ -102,6 +103,9 @@ public class Main {
 
 		map.put("var_id", reformatDateString(getValueFromTable(doc, "#layertopoArisData", "kods")));
 
+		ParishAdmCenterLinkService captialLinkService = new ParishAdmCenterLinkServiceImpl();
+		map.put("parish_adm_center", captialLinkService.getFormattedWikilink(territ[0], Case.GENITIVE));
+		
 		// TODO viensētas???
 	}
 
