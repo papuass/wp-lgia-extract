@@ -44,12 +44,16 @@ public class ParishAdmCenterLinkServiceImpl implements ParishAdmCenterLinkServic
 	@Override
 	public String getFormattedWikilink(String name, Case grammarCase) {
 		Village village = capitals.get(name);
-		if (grammarCase == Case.NOMINATIVE) {
-			return getFormattedCapitalWikilinkNominative(village.articleTitle, village.title);
-		} else if (grammarCase == Case.GENITIVE) {
-			return getFormattedCapitalWikilinkGenitive(village.articleTitle, village.title);
+		if (village != null) {
+			if (grammarCase == Case.NOMINATIVE) {
+				return getFormattedCapitalWikilinkNominative(village.articleTitle, village.title);
+			} else if (grammarCase == Case.GENITIVE) {
+				return getFormattedCapitalWikilinkGenitive(village.articleTitle, village.title);
+			}
+			throw new NotImplementedException();
+		} else {
+			return "";
 		}
-		throw new NotImplementedException();
 	}
 
 	String getFormattedCapitalWikilinkGenitive(String articleTitle, String title) {
