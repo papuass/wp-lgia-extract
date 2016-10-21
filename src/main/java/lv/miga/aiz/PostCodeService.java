@@ -2,6 +2,8 @@ package lv.miga.aiz;
 
 public interface PostCodeService {
 	
-	String getPostCode(String settlementName);
+	static final String NOT_FOUND = "NAV_ATRASTS";
+	
+	String getPostCode(String settlementName, String parish);
 
 }

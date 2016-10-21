@@ -10,10 +10,9 @@ import org.jsoup.select.Elements;
 public class PostCodeServiceImpl implements PostCodeService {
 
 	private static final String POSTCODESDB_URL = "http://www.postcodesdb.com/AlphabeticSearch.aspx?country=Latvia&city=";
-	private static final String NOT_FOUND = "NAV_ATRASTS";
 
 	@Override
-	public String getPostCode(String settlementName) {
+	public String getPostCode(String settlementName, String parish) {
 		String code = null;
 		try {
 			Document doc = Jsoup.connect(POSTCODESDB_URL + settlementName).get();

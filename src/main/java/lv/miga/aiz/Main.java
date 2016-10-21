@@ -45,9 +45,10 @@ public class Main {
 					fillValueMapFromDocument(map, doc);
 
 					String name = (String) map.get("name");
+					String parish = (String) map.get("parish");
 					if (name != null) {
-						PostCodeService postCodeService = new PostCodeServiceImpl();
-						map.put("post_code", postCodeService.getPostCode(name));
+						PostCodeService postCodeService = new PostCodeGoogleGeocodeServiceImpl();
+						map.put("post_code", postCodeService.getPostCode(name, parish));
 					}
 				} catch (IllegalArgumentException e) {
 					map.put("message", "Kļūda, objekts nav atrasts, ID: " + id);
