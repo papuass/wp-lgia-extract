@@ -3,9 +3,11 @@ package lv.miga.aiz;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Optional;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import lv.miga.aiz.pojo.AddressComponent;
 import lv.miga.aiz.pojo.Results;
 
 public class PostCodeGoogleGeocodeServiceImpl implements PostCodeService {
@@ -27,8 +29,10 @@ public class PostCodeGoogleGeocodeServiceImpl implements PostCodeService {
 
 			Results data = mapper.readValue(url.openConnection().getInputStream(), Results.class);
 			if ("OK".equals(data.status) && data.results.size() == 1) {
-				code = data.results.get(0).addressComponents.stream()
-						.filter(component -> component.types.contains("postal_code")).findAny().get().shortName;
+				Optional<AddressComponent> addressComponent = data.results.get(0).addressComponents.stream()
+						.filter(component -> component.types.contains("postal_code")).findAny();
+				if (addressComponent.isPresent())
+					code = addressComponent.get().shortName;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

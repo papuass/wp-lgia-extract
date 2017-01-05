@@ -112,7 +112,7 @@ public class Main {
 
 	private static String reformatDateString(String value) {
 		String returnString = value;
-		Pattern datePattern = Pattern.compile("^(\\d+)\\.(\\d+)\\.(\\d+)\\.$");
+		Pattern datePattern = Pattern.compile("^(\\d+)\\.(\\d+)\\.(\\d+)\\.?$");
 		Pattern yearPattern = Pattern.compile("^(\\d+)\\.$");
 
 		Matcher m = datePattern.matcher(value);
