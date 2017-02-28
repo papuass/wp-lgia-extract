@@ -102,11 +102,21 @@ public class Main {
 			map.put("lon_sec", m.group(3));
 		}
 
+		p = Pattern.compile("^(\\d+\\.\\d+)\\(.*$");
+		m = p.matcher(latitude);
+		if (m.matches()) {
+			map.put("lat", m.group(1));
+		}
+		m = p.matcher(longitude);
+		if (m.matches()) {
+			map.put("lon", m.group(1));
+		}
+
 		map.put("var_id", reformatDateString(getValueFromTable(doc, "#layertopoArisData", "kods")));
 
 		ParishAdmCenterLinkService captialLinkService = new ParishAdmCenterLinkServiceImpl();
 		map.put("parish_adm_center", captialLinkService.getFormattedWikilink(territ[0], Case.GENITIVE));
-		
+
 		// TODO viensētas???
 	}
 
@@ -151,7 +161,7 @@ public class Main {
 		Elements el = doc.select("table.h100 td[style=vertical-align:top;] " + marker + " td:contains(" + string
 				+ ":) + td.dati_skatit");
 		if (!el.isEmpty()) {
-			return el.get(0).text().replace('\u00A0' ,' ').trim();
+			return el.get(0).text().replace('\u00A0', ' ').trim();
 		}
 		return NOT_FOUND;
 	}

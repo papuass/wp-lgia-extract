@@ -29,9 +29,10 @@
 	<li><a href="${url}">LĢIA</a></li>
 	<li><a href="https://www.google.lv/maps/place/${name},+${parish}">Google Maps (ciems)</a></li>
 	<li><a href="https://www.google.lv/maps/place/${parish}">Google Maps (pagasts)</a></li>
-	<li><a href="http://www.kurtuesi.lv/maps">Kurtuesi</a> (augstums no topokartes)</li>
+	<li><a href="http://kartes.gisnet.lv/?zoom=9&lat=${lat}&lon=${lon}">ĢISnet TOPO</a></li>
 	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>
-	<li><a href="https://www.google.lv/images?safe=off&tbm=isch&tbs=sur:fmc&q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google Images</a> (meklēt brīvus attēlus)</li>
+	<li><a href="https://www.google.lv/search?q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google</a> (meklēt ārpus Vikipēdijas)</li>
+	<li><a href="https://commons.wikimedia.org/w/index.php?search=${name}">Wikimedia Commons</a></li>	
 	<li><a href="http://saraksts.mantojums.lv/lv/piemineklu-saraksts/?t=${name}&region=0&group=0&type=0">VKPAI saraksts</a></li>	
 </ul>
 </div>
