@@ -29,7 +29,7 @@
 	<li><a href="${url}">LĢIA</a></li>
 	<li><a href="https://www.google.lv/maps/place/${name},+${parish}">Google Maps (ciems)</a></li>
 	<li><a href="https://www.google.lv/maps/place/${parish}">Google Maps (pagasts)</a></li>
-	<li><a href="http://kartes.gisnet.lv/?zoom=9&lat=${lat}&lon=${lon}">ĢISnet TOPO</a></li>
+	<li><a href="https://vesture.dodies.lv/#m=14/${lat}/${lon}&l=O/8">Dodies.lv vēsturiskās kartes</a></li>
 	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>
 	<li><a href="https://www.google.lv/search?q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google</a> (meklēt ārpus Vikipēdijas)</li>
 	<li><a href="https://commons.wikimedia.org/w/index.php?search=${name}">Wikimedia Commons</a></li>	
