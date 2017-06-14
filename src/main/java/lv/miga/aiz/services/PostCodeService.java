@@ -1,4 +1,4 @@
-package lv.miga.aiz;
+package lv.miga.aiz.services;
 
 public interface PostCodeService {
 	

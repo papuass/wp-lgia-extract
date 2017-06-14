@@ -1,4 +1,4 @@
-package lv.miga.aiz;
+package lv.miga.aiz.services;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -56,7 +56,8 @@ public class ParishAdmCenterLinkServiceImpl implements ParishAdmCenterLinkServic
 		}
 	}
 
-	String getFormattedCapitalWikilinkGenitive(String articleTitle, String title) {
+	@Override
+	public String getFormattedCapitalWikilinkGenitive(String articleTitle, String title) {
 
 		// Quick & Dirty
 		if (title.endsWith("i")) { // Ērgļi

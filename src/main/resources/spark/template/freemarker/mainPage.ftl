@@ -33,7 +33,8 @@
 	<li><a href="http://balticmaps.eu/">Baltic Maps</a></li>
 	<li><a href="https://www.google.lv/search?q=%22${name}%22+-site:wikipedia.org+-site:wikimedia.org">Google</a> (meklēt ārpus Vikipēdijas)</li>
 	<li><a href="https://commons.wikimedia.org/w/index.php?search=${name}">Wikimedia Commons</a></li>	
-	<li><a href="http://saraksts.mantojums.lv/lv/piemineklu-saraksts/?t=${name}&region=0&group=0&type=0">VKPAI saraksts</a></li>	
+	<li><a href="http://saraksts.mantojums.lv/lv/piemineklu-saraksts/?t=${name}&region=0&group=0&type=0">VKPAI saraksts</a></li>
+	<li><a href="https://likumi.lv/doc.php?id=198589">Autoceļu nosaukumi</a></li>		
 </ul>
 </div>
 
@@ -74,7 +75,7 @@
 | footnotes                = &lt;!-- specpiezīmes --&gt;
 }}
 
-'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Atrodas pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra ${parish_adm_center}, XX km no novada centra [[${municipality_adm_center}]]s un YYY km no [[Rīga]]s.
+'''${name}''' ir ciems [[${municipality}|${municipality_gen}]] [[${parish}|${parish_loc}]]. Atrodas pagasta &lt;!-- izvēlies vienu --&gt; ziemeļu dienvidu austrumu rietumu centrālajā daļā Z km no pagasta centra ${parish_adm_center}, XX km no novada centra ${municipality_adm_center} un YYY km no [[Rīga]]s.
 
 Apdzīvotā vieta atrodas pie autoceļa [[PYYYY]], [[ZZZZ]] upes ezera krastā.
 

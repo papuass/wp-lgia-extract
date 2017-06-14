@@ -1,4 +1,4 @@
-package lv.miga.aiz;
+package lv.miga.aiz.services;
 
 public interface ParishAdmCenterLinkService {
 
@@ -9,5 +9,7 @@ public interface ParishAdmCenterLinkService {
 	String getTitle(String name);
 
 	String getFormattedWikilink(String name, Case grammarCase);
+
+	String getFormattedCapitalWikilinkGenitive(String articleTitle, String title);
 
 }
